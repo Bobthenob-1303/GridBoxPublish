@@ -1,0 +1,1 @@
+This site was made using HTML CSS, I used AI for the text information as a placeholder, but the rest of it was done by me, primarily using HTML CSS grid layouts and hover effects for basic interactivity

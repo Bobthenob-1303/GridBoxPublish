@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Printing Press</title>
+    <link rel="stylesheet" href="../style.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: black;
+            min-height: 100vh;
+            display: grid;
+            place-items: center;
+            padding: 60px 30px;
+            font-family: "TypeMachine", sans-serif;
+            color: whitesmoke;
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 30px;
+            width: 100%;
+            max-width: 1300px; 
+            min-height: 550px; 
+        }
+
+
+        .PPtext1, .PPtext2, .card-image{
+            background-color: #1a1a1a;
+            border-radius: 24px;
+            padding: 45px 35px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+    
+            transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+        }
+
+  
+        .PPtext1:hover, .PPtext2:hover {
+            transform: translateY(+12px);
+            background-color: black
+        }
+
+        .printingpress-image {
+            background-color: #2b2b2b;
+            border-radius: 24px;
+            overflow: hidden; 
+            padding: 0;       
+            display: flex;
+        }
+        
+        .printingpress-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover; 
+        display: block;
+        }
+
+        
+        h3 {
+            font-size: 32px;
+            margin-bottom: 18px;
+        }
+
+        p {
+            font-size: 18px; 
+            line-height: 1.7;
+            color: #ccc;
+        }
+
+       
+        @media (max-width: 900px) {
+            .grid-container {
+                grid-template-columns: 1fr;
+            }
+
+            .card-image {
+                min-height: 350px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="grid-container">
+        <!-- Column 1: Text Content -->
+        <div class="PPtext1">
+            <h3>Printing Press</h3>
+            <p>
+               The printing press, developed by Johannes Gutenberg in Europe around the 1440s–1450s, used movable metal type. Individual letters could be arranged into a page, inked, and pressed onto paper repeatedly.
+            </p>
+        </div>
+
+        <!-- Column 2: Image Placeholder -->
+        <div class="printingpress-image">
+            <img src="https://res.cloudinary.com/aenetworks/image/upload/c_fill,ar_0.9409023511967803,w_3840,h_4083,g_auto/dpr_auto/f_auto/q_auto:eco/v1/961d16d5-5443-409c-ac14-23c67cb6592f?_a=BAVMn6E80" alt="Printing Press">
+        </div>
+
+        <!-- Column 3: Text Content -->
+        <div class="PPtext2">
+            <h3>Redundancy</h3>
+            <p>
+                A scribe might spend months or years producing a single book. The printing press allowed the same page of type to produce hundreds of copies.
+
+The Henry Ford notes that printing became progressively faster and cheaper as presses improved, allowing printed material to be distributed on a mass scale
+            </p>
+        </div>
+    </div>
+
+</body>
+</html>
